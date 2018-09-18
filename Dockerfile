@@ -5,6 +5,12 @@ ARG ALPINE_VERSION=3.8
 ARG WORKDIR
 WORKDIR $WORKDIR
 
+RUN echo $(ls)
+
+ADD . .
+
+RUN echo $(ls)
+
 RUN mix local.rebar --force
 RUN mix local.hex --force
 
